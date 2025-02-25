@@ -75,7 +75,6 @@
         </div>
     </div>
     
-    <!-- Navbar -->
     <nav class="bg-[var(--bg-color)] shadow-lg fixed w-full z-50 top-0 md:top-[48px]">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
@@ -90,13 +89,6 @@
              
                 <!-- Navigation Menu -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <!-- <a href="#about" class="nav-link px-3 py-2 rounded transition duration-300">About</a>
-                    <a href="#new-member" class="nav-link px-3 py-2 rounded transition duration-300">Join</a>
-                    <a href="#ideation-board" class="nav-link px-3 py-2 rounded transition duration-300">Ideation</a>
-                    <a href="#members" class="nav-link px-3 py-2 rounded transition duration-300">Members</a>
-                    <a href="#hackathons" class="nav-link px-3 py-2 rounded transition duration-300">Hackathons</a>
-                    <a href="#labs" class="nav-link px-3 py-2 rounded transition duration-300">Labs</a>
-                    <a href="#communication-channels" class="nav-link px-3 py-2 rounded transition duration-300">Connect</a> -->
                 </div>
 
                    <!-- Center Theme Toggle -->
@@ -222,31 +214,138 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="mobile-menu-btn p-2 rounded-lg transition-all duration-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-            <button onclick="toggleMenu()" class="mobile-menu-btn p-2 rounded-lg transition-all duration-300">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-[var(--bg-color)]">
+            <!-- Theme toggles for mobile -->
+            <div class="flex flex-wrap justify-center gap-3 py-4 border-b border-[var(--border-color)]">
+                <!-- Auto Theme -->
+                <button onclick="applyTheme('auto')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-sync-alt text-xl"></i>
+                </button>
+                
+                <!-- Dark Themes -->
+                <button onclick="applyTheme('dark')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-moon text-xl"></i>
+                </button>
+                <button onclick="applyTheme('dark-2')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-circle text-xl"></i>
+                </button>
+
+                <!-- Cool Colors -->
+                <button onclick="applyTheme('blue')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-water text-xl"></i>
+                </button>
+                <button onclick="applyTheme('ocean')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-wave-square text-xl"></i>
+                </button>
+                <button onclick="applyTheme('purple')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-gem text-xl"></i>
+                </button>
+
+                <!-- Warm Colors -->
+                <button onclick="applyTheme('sunset')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-sun text-xl"></i>
+                </button>
+                <button onclick="applyTheme('rose')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-fire text-xl"></i>
+                </button>
+                <button onclick="applyTheme('forest')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-tree text-xl"></i>
+                </button>
+
+                <!-- Special Colors -->
+                <button onclick="applyTheme('midnight')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-star text-xl"></i>
+                </button>
+                <button onclick="applyTheme('coral')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-fish text-xl"></i>
+                </button>
+                <button onclick="applyTheme('mint')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-seedling text-xl"></i>
+                </button>
+                <button onclick="applyTheme('amber')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-certificate text-xl"></i>
+                </button>
+
+                <!-- Seasonal Themes -->
+                <button onclick="applyTheme('nordic')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-snowflake text-xl"></i>
+                </button>
+                <button onclick="applyTheme('sakura')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-fan text-xl"></i>
+                </button>
+                <button onclick="applyTheme('cyber')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-microchip text-xl"></i>
+                </button>
+                <button onclick="applyTheme('autumn')"
+                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
+                    style="border-color: var(--text-color)">
+                    <i class="fas fa-leaf text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu items -->
+            <div class="py-2">
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 hero-gradient hero-section">
-        <canvas id="network-canvas" class="network-canvas"></canvas>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="pt-32 pb-20 hero-gradient hero-section relative overflow-hidden">
+        <canvas id="network-canvas" class="absolute inset-0 w-full h-full"></canvas>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <h1 class="text-5xl font-bold text-[var(--text-color)] mb-6 animate-slide-up">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-color)] mb-6 animate-slide-up">
                     Welcome to <span class="text-[var(--accent-color)] font-extrabold">Connectivity Matter</span>
-            </h1>
-                <p class="text-xl text-[var(--text-color)] max-w-2xl mx-auto mb-8 animate-slide-up font-medium">
+                </h1>
+                <p class="text-lg md:text-xl text-[var(--text-color)] max-w-2xl mx-auto mb-8 animate-slide-up font-medium">
                     Connectivity isn't a luxury, it's a fundamental right. Join us in building resilient networks for everyone, everywhere.
                 </p>
                 <a href="https://discord.gg/kZeYU4VgJn" 
                    target="_blank"
-                   class="btn-primary px-6 py-3 rounded-lg inline-flex items-center transition duration-300 animate-pulse-slow">
+                   class="btn-primary px-6 py-3 rounded-lg inline-flex items-center transition duration-300 animate-pulse-slow hover:scale-105">
                     <i class="fab fa-discord mr-2"></i>
                     Connect
                     <i class="fas fa-arrow-right ml-2"></i>
@@ -559,327 +658,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <!-- <section id="about" class="py-20 bg-[var(--bg-color)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[var(--text-color)] mb-4">About Us</h2>
-                <div class="w-24 h-1 bg-[var(--accent-color)] mx-auto"></div>
-</div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[var(--bg-color)] p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <i class="fas fa-users text-4xl text-[var(--accent-color)] mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-[var(--text-color)]">Community</h3>
-                    <p class="text-[var(--text-color)] opacity-90">Join a diverse group of professionals, freelancers, and students.</p>
-                </div>
-                <div class="bg-[var(--bg-color)] p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <i class="fas fa-lightbulb text-4xl text-[var(--accent-color)] mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-[var(--text-color)]">Innovation</h3>
-                    <p class="text-[var(--text-color)]">Create innovative solutions to real-world problems.</p>
-                </div>
-                <div class="bg-[var(--bg-color)] p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <i class="fas fa-code-branch text-4xl text-[var(--accent-color)] mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2 text-[var(--text-color)]">Collaboration</h3>
-                    <p class="text-[var(--text-color)]">Work together on exciting projects and hackathons.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
- 
-
-    <!-- Hackathons Section -->
-    <!-- <section id="hackathons" class="py-20 bg-[var(--bg-color)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[var(--text-color)] mb-4">Hackathons</h2>
-                <div class="w-24 h-1 bg-[var(--accent-color)] mx-auto"></div>
-                <p class="text-[var(--text-color)] mt-4 text-lg">Explore and participate in exciting hackathons</p>
-                        </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-                    <h3 class="text-2xl font-semibold mb-4 text-[var(--text-color)]">Active Hackathons</h3>
-                    <div class="space-y-6">
-                        <div class="bg-[var(--bg-color)]/50 p-4 rounded-lg border border-[var(--border-color)]">
-                            <h4 class="text-xl font-semibold mb-2 text-[var(--text-color)]">AI for Connectivity Hackathon II</h4>
-                            <p class="text-[var(--text-color)] mb-3">Building Resilient Networks - Create AI-driven solutions for public sector network management.</p>
-                            <div class="flex items-center gap-4 mb-3">
-                                <span class="text-[var(--text-color)]"><i class="far fa-calendar-alt mr-2"></i>Feb 28 - Mar 2, 2025</span>
-                                <span class="text-[var(--text-color)]"><i class="fas fa-trophy mr-2"></i>$5,000 Prize Pool</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <a href="https://lablab.ai/event/ai-for-connectivity-hackathon-building-resilient-networks" 
-                                   target="_blank"
-                                   class="inline-flex items-center px-4 py-2 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] rounded-lg transition duration-300">
-                                    <i class="fas fa-external-link-alt mr-2"></i>
-                                    View Details
-                                </a>
-                                <a href="https://docs.google.com/document/d/1YzXaS2GsT4Fq7m6CIr4GuP_U-UgmMhnAj2-NBtvuHhc/edit?usp=sharing" 
-                                   target="_blank"
-                                   class="inline-flex items-center px-4 py-2 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] rounded-lg transition duration-300">
-                                    <i class="fas fa-file-alt mr-2"></i>
-                                    View Docs
-                        </a>
-                    </div>
-                        </div>
-                        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRA5hhi6LKP48W04-aIM8MgNY5jftf7c-5Fm1zNy4A-3Gujczq3A1UNGl4lz7mLWlCS4c0BqV68_9/pubhtml?gid=389117216&single=true" 
-                           target="_blank"
-                           class="inline-flex items-center px-4 py-2 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] rounded-lg transition duration-300">
-                            <i class="fas fa-trophy mr-2"></i>
-                            View More Active Hackathons
-                        </a>
-                    </div>
-                        </div>
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-                    <h3 class="text-2xl font-semibold mb-4 text-[var(--text-color)]">Wishlist Hackathons</h3>
-                    <p class="text-[var(--text-color)] mb-4">Discover upcoming hackathons our members are interested in.</p>
-                    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRA5hhi6LKP48W04-aIM8MgNY5jftf7c-5Fm1zNy4A-3Gujczq3A1UNGl4lz7mLWlCS4c0BqV68_9/pubhtml?gid=389117216&single=true" 
-                       target="_blank"
-                       class="inline-flex items-center px-4 py-2 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] rounded-lg transition duration-300">
-                        <i class="fas fa-star mr-2"></i>
-                        View Wishlist
-                        </a>
-                    </div>
-                        </div>
-                    </div>
-    </section> -->
-
-    <!-- Labs Section -->
-    <!-- <section id="labs" class="py-20 bg-[var(--bg-color)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[var(--text-color)] mb-4">Our Labs</h2>
-                
-
-
-
-                <div class="w-24 h-1 bg-[var(--accent-color)] mx-auto"></div>
-                <p class="text-xl text-[var(--text-color)] mt-4">Innovative products built by our community</p>
-                        </div>
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                
-                                                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="flex items-center mb-6">
-                            <i class="fas fa-robot text-[var(--accent-color)] text-4xl mr-2"></i>
-                            <span class="text-2xl font-bold text-[var(--text-color)]">DevAI</span>
-                        </div>
-                        <p class="text-[var(--text-color)] mb-6">Leverage AI to enhance your development workflow.</p>
-                        <a href="https://dev-assist-lake.vercel.app" 
-                           target="_blank"
-                           class="inline-flex items-center px-6 py-3 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] font-semibold rounded-lg transition duration-300">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Visit Project
-                        </a>
-                    </div>
-                    </div>
-
-                   <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-    <div class="flex flex-col items-center text-center">
-        <div class="flex items-center mb-6">
-            <i class="fas fa-project-diagram text-[var(--accent-color)] text-4xl mr-2"></i>
-            <span class="text-2xl font-bold text-[var(--text-color)]">Mentor AI</span>
-                        </div>
-        <p class="text-[var(--text-color)] mb-6">An AI-powered mentoring platform.</p>
-        <a href="https://mentor-ai-five.vercel.app/" 
-           target="_blank"
-           class="inline-flex items-center px-6 py-3 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] font-semibold rounded-lg transition duration-300">
-            <i class="fas fa-external-link-alt mr-2"></i>
-            Visit Project
-        </a>
-    </div>
-                    </div>
-
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="flex items-center mb-6">
-                            <i class="fas fa-gamepad text-[var(--accent-color)] text-4xl mr-2"></i>
-                            <span class="text-2xl font-bold text-[var(--text-color)]">Code Games</span>
-                        </div>
-                        <p class="text-[var(--text-color)] mb-6">Test your Python skills with interactive games and challenges!</p>
-                        <a href="https://game-puzzles.vercel.app/index-ps/index-ps.html" 
-                           target="_blank"
-                           class="inline-flex items-center px-6 py-3 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] font-semibold rounded-lg transition duration-300">
-                            <i class="fas fa-play mr-2"></i>
-                            Play Games
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="flex items-center mb-6">
-                            <i class="fas fa-comments text-[var(--accent-color)] text-4xl mr-2"></i>
-                            <span class="text-2xl font-bold text-[var(--text-color)]">ConsumerVaani</span>
-            </div>
-                        <p class="text-[var(--text-color)] mb-6">A platform empowering consumers to share their voices and experiences.</p>
-                        <a href="https://consumer-vaani.vercel.app/" 
-                           target="_blank"
-                           class="inline-flex items-center px-6 py-3 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] font-semibold rounded-lg transition duration-300">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Visit Project
-                        </a>
-        </div>
-            </div>
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="flex items-center mb-6">
-                            <i class="fas fa-search text-[var(--accent-color)] text-4xl mr-2"></i>
-                            <span class="text-2xl font-bold text-[var(--text-color)]">Hackathon Search Engine</span>
-                    </div>
-                        <p class="text-[var(--text-color)] mb-6">Discover and explore hackathons from around the world in one place.</p>
-                        <a href="https://hackathon-search-engine.vercel.app" 
-                           target="_blank"
-                           class="inline-flex items-center px-6 py-3 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] font-semibold rounded-lg transition duration-300">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Visit Project
-                        </a>
-                </div>
-                    </div>
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-[var(--border-color)]">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="flex items-center mb-6">
-                            <i class="fas fa-check-circle text-[var(--accent-color)] text-4xl mr-2"></i>
-                            <span class="text-2xl font-bold text-[var(--text-color)]">Consume Wisely</span>
-                </div>
-                        <p class="text-[var(--text-color)] mb-6">Make informed decisions and shop smarter with data-driven insights.</p>
-                        <a href="https://consume-wisely.vercel.app" 
-                           target="_blank"
-                           class="inline-flex items-center px-6 py-3 bg-[var(--accent-color)] text-[var(--bg-color)] hover:bg-[var(--accent-dark)] font-semibold rounded-lg transition duration-300">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Visit Project
-                        </a>
-                    </div>
-                </div>
-
-
-
-                    </div>
-                </div>
-
-     
-
-    </section> -->
-
-
-    <!-- Communication Channels -->
-    <!-- <section id="communication-channels" class="py-20 bg-[var(--bg-color)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[var(--text-color)] mb-4">Stay Connected</h2>
-                <div class="w-24 h-1 bg-[var(--accent-color)] mx-auto"></div>
-                    </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[var(--bg-color)] p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-center">
-                        <i class="fab fa-whatsapp text-4xl text-[var(--accent-color)] mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-[var(--text-color)]">WhatsApp</h3>
-                        <p class="text-[var(--text-color)] mb-4">Join our WhatsApp group for real-time discussions</p>
-                        <a href="https://chat.whatsapp.com/ChVILMXSp19AsSaMCDrgt2" 
-                           target="_blank"ide
-                           class="inline-flex items-center px-4 py-2 bg-[var(--accent-color)] hover:bg-[var(--accent-dark)] text-[var(--bg-color)] font-semibold rounded-lg transition duration-300">
-                            Join Group
-                        </a>
-                </div>
-                    </div>
-                <div class="bg-[var(--bg-color)] p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-center">
-                        <i class="fab fa-discord text-4xl text-[var(--accent-color)] mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-[var(--text-color)]">Discord</h3>
-                        <p class="text-[var(--text-color)] mb-4">Connect on our Discord server</p>
-                        <a href="https://discord.gg/MA4uATs8YG" 
-                           target="_blank"
-                           class="inline-flex items-center px-4 py-2 bg-[var(--accent-color)] hover:bg-[var(--accent-dark)] text-[var(--bg-color)] font-semibold rounded-lg transition duration-300">
-                            Join Server
-                </a>
-                </div>
-                    </div>
-                <div class="bg-[var(--bg-color)] p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="text-center">
-                        <i class="fas fa-user-secret text-4xl text-[var(--accent-color)] mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-[var(--text-color)]">Anonymous Board</h3>
-                        <p class="text-[var(--text-color)] mb-4">Share ideas anonymously</p>
-                        <a href="https://ideaboardz.com/for/Anonymous%20idea%20boards%20/5214055#" 
-                    target="_blank"
-                           class="inline-flex items-center px-4 py-2 bg-[var(--accent-color)] hover:bg-[var(--accent-dark)] text-[var(--bg-color)] font-semibold rounded-lg transition duration-300">
-                            View Board
-                    </a>
-                </div>
-                    </div>
-                </div>
-            </div>
-    </section> -->
-
-       <!-- Join Section -->
-       <!-- <section id="new-member" class="py-20 bg-[var(--bg-color)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[var(--text-color)] mb-4">Connect with Community</h2>
-                <div class="w-24 h-1 bg-[var(--accent-color)] mx-auto"></div>
-                <p class="text-xl text-[var(--text-color)] mt-4">Be part of something amazing</p>
-            </div>
-            <div class="max-w-md mx-auto">
-                <a href="https://forms.gle/5BQPtMWQz8eNnpDV7" target="_blank" 
-                   class="block w-full text-center px-6 py-4 bg-[var(--accent-color)] hover:bg-[var(--accent-dark)] text-[var(--bg-color)] font-semibold rounded-lg transition duration-300 animate-float">
-                    <i class="fas fa-user-plus mr-2"></i>
-                    Connect Now
-                </a>
-            </div>
-        </div>
-        </section> -->
-
-    <!-- Ideation Board -->
-    <!-- <section id="ideation-board" class="py-20 bg-[var(--bg-color)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[var(--text-color)] mb-4">Ideation Board</h2>
-                <div class="w-24 h-1 bg-[var(--accent-color)] mx-auto"></div>
-                    </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-2xl font-semibold text-[var(--text-color)]">Figma Board</h3>
-                        <a href="/figma.html" 
-                    target="_blank"
-                           class="text-[var(--accent-color)] hover:text-[var(--accent-dark)]">
-                            <i class="fab fa-figma text-xl"></i>
-                    </a>
-            </div>
-                    <p class="text-[var(--text-color)]">Design and prototype your ideas visually with our team.</p>
-                    </div>
-                <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-2xl font-semibold text-[var(--text-color)]">Ideation Spreadsheet</h3>
-                        <a href="/ideation-sheet.html" 
-                           target="_blank"
-                           class="text-[var(--accent-color)] hover:text-[var(--accent-dark)]">
-                            <i class="fas fa-external-link-alt text-xl"></i>
-                        </a>
-                        </div>
-                    <p class="text-[var(--text-color)]">Collaborate and share your innovative ideas with the community.</p>
-                    </div>
-                </div>
-                    </div>
-    </section> -->
-
-    <!-- Members Section -->
-    <!-- <section id="members" class="py-20 bg-[var(--bg-color)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[var(--text-color)] mb-4">Our Members</h2>
-                <div class="w-24 h-1 bg-[var(--accent-color)] mx-auto"></div>
-                    </div>
-            <div class="text-center">
-                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRA5hhi6LKP48W04-aIM8MgNY5jftf7c-5Fm1zNy4A-3Gujczq3A1UNGl4lz7mLWlCS4c0BqV68_9/pubhtml?gid=895087800&single=true" 
-                   target="_blank"
-                   class="inline-flex items-center px-6 py-3 bg-[var(--accent-color)] hover:bg-[var(--accent-dark)] text-[var(--bg-color)] font-semibold rounded-lg transition duration-300">
-                    <i class="fas fa-users mr-2"></i>
-                    View Member Profiles
-                </a>
-                </div>
-            </div>
-    </section> -->
-
             <!-- Call to Action -->
     <section class="py-20 cta-gradient">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -968,6 +746,45 @@
         window.addEventListener('load', () => {
             new NetworkAnimation();
         }, false);
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = this.querySelector('i');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                const menuIcon = mobileMenuButton.querySelector('i');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                const menuIcon = document.getElementById('mobile-menu-button').querySelector('i');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
     </script>
 </body>
 </html>
