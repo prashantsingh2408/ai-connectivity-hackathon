@@ -222,128 +222,14 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button onclick="toggleMenu()" class="mobile-menu-btn p-2 rounded-lg transition-all duration-300">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-[var(--bg-color)]">
-            <!-- Theme toggles for mobile -->
-            <div class="flex flex-wrap justify-center gap-3 py-4 border-b border-[var(--border-color)]">
-                <!-- Auto Theme -->
-                <button onclick="applyTheme('auto')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-sync-alt text-xl"></i>
-                </button>
-                
-                <!-- Dark Themes -->
-                <button onclick="applyTheme('dark')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-moon text-xl"></i>
-                </button>
-                <button onclick="applyTheme('dark-2')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-circle text-xl"></i>
-                </button>
-
-                <!-- Cool Colors -->
-                <button onclick="applyTheme('blue')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-water text-xl"></i>
-                </button>
-                <button onclick="applyTheme('ocean')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-wave-square text-xl"></i>
-                </button>
-                <button onclick="applyTheme('purple')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-gem text-xl"></i>
-                </button>
-
-                <!-- Warm Colors -->
-                <button onclick="applyTheme('sunset')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-sun text-xl"></i>
-                </button>
-                <button onclick="applyTheme('rose')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-fire text-xl"></i>
-                </button>
-                <button onclick="applyTheme('forest')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-tree text-xl"></i>
-                </button>
-
-                <!-- Special Colors -->
-                <button onclick="applyTheme('midnight')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-star text-xl"></i>
-                        </button>
-                <button onclick="applyTheme('coral')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-fish text-xl"></i>
-                        </button>
-                <button onclick="applyTheme('mint')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-seedling text-xl"></i>
-                        </button>
-                <button onclick="applyTheme('amber')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-certificate text-xl"></i>
-                        </button>
-
-                <!-- Seasonal Themes -->
-                <button onclick="applyTheme('nordic')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-snowflake text-xl"></i>
-                    </button>
-                <button onclick="applyTheme('sakura')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-fan text-xl"></i>
-                    </button>
-                <button onclick="applyTheme('cyber')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-microchip text-xl"></i>
-                    </button>
-                <button onclick="applyTheme('autumn')"
-                    class="theme-btn w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-color)] border-2 shadow-md"
-                    style="border-color: var(--text-color)">
-                    <i class="fas fa-leaf text-xl"></i>
-                    </button>
-                </div>
-            <!-- Mobile menu items -->
-            <div class="py-2">
-                <!-- <a href="#about" class="block text-[var(--text-color)] hover:text-[var(--accent-color)] px-4 py-2">About</a> -->
-                <!-- <a href="#new-member" class="block text-[var(--text-color)] hover:text-[var(--accent-color)] px-4 py-2">Join</a> -->
-                <!-- <a href="#ideation-board" class="block text-[var(--text-color)] hover:text-[var(--accent-color)] px-4 py-2">Ideation</a> -->
-                <!-- <a href="#members" class="block text-[var(--text-color)] hover:text-[var(--accent-color)] px-4 py-2">Members</a> -->
-                <!-- <a href="#hackathons" class="block text-[var(--text-color)] hover:text-[var(--accent-color)] px-4 py-2">Hackathons</a> -->
-                <!-- <a href="#labs" class="block text-[var(--text-color)] hover:text-[var(--accent-color)] px-4 py-2">Labs</a> -->
-                <!-- <a href="#communication-channels" class="block text-[var(--text-color)] hover:text-[var(--accent-color)] px-4 py-2">Connect</a> -->
-            </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button onclick="toggleMenu()" class="mobile-menu-btn p-2 rounded-lg transition-all duration-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
     </nav>
 
@@ -432,13 +318,20 @@
                             <h3 class="text-xl font-bold text-[var(--text-color)]">📜 Track 1: Procurement & Policy Innovation</h3>
                         </div>
                         <div class="ml-8 space-y-4">
+                            <!-- Track 1 Product -->
                             <div class="bg-[var(--bg-color)] p-4 rounded-lg border border-[var(--border-color)]">
                                 <h4 class="font-semibold text-[var(--accent-color)] mb-2">Product: GoodVendor</h4>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <p class="text-[var(--text-color)] opacity-90">
-                                        <i class="fas fa-search-location text-[var(--accent-color)] text-xl"></i>
-                                        Description: Search and find best internet provider in your location
-                                    </p>
+                                    <div class="text-[var(--text-color)] opacity-90">
+                                        <i class="fas fa-search-location text-[var(--accent-color)] text-xl mb-2"></i>
+                                        <p class="font-semibold mb-2">Description:</p>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>AI-powered platform for internet service provider analysis</li>
+                                            <li>Compares coverage, performance, and costs</li>
+                                            <li>Evaluates vendor contract terms</li>
+                                            <li>Location-based recommendations</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <span class="text-[var(--text-color)] opacity-90">
@@ -451,8 +344,50 @@
                                        target="_blank"
                                        class="inline-flex items-center text-[var(--accent-color)] hover:text-[var(--accent-dark)] transition duration-300">
                                         <i class="fas fa-external-link-alt mr-2"></i>
-                                        View Product Details
+                                        See Details 
+                                        
+                                        
                                     </a>
+                                    <span class="text-[var(--text-color)] opacity-90 ml-auto text-sm bg-[var(--accent-color)] text-white px-2 py-1 rounded-full">
+                                        <i class="fas fa-lock mr-2"></i>
+                                        Private
+                                    </span>
+                                   
+
+                                </div>
+                            </div>
+                            <!-- Add new product to Track 1 -->
+                            <div class="bg-[var(--bg-color)] p-4 rounded-lg border border-[var(--border-color)]">
+                                <h4 class="font-semibold text-[var(--accent-color)] mb-2">Product: PolicyAI</h4>
+                                <div class="flex items-center gap-2 mb-3">
+                                    <div class="text-[var(--text-color)] opacity-90">
+                                        <i class="fas fa-gavel text-[var(--accent-color)] text-xl mb-2"></i>
+                                        <p class="font-semibold mb-2">Description:</p>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>Decodes complex local connectivity regulations</li>
+                                            <li>Analyzes financing models for network deployment</li>
+                                            <li>Provides compliance recommendations</li>
+                                            <li>Simplifies policy understanding for decision-makers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-[var(--text-color)] opacity-90">
+                                        <i class="fas fa-tag text-[var(--accent-color)] mr-2"></i>
+                                        Category: Policy & Regulation Analysis
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-2 mt-3">
+                                    <a href="https://docs.google.com/document/d/1YzXaS2GsT4Fq7m6CIr4GuP_U-UgmMhnAj2-NBtvuHhc/edit?usp=sharing" 
+                                       target="_blank"
+                                       class="inline-flex items-center text-[var(--accent-color)] hover:text-[var(--accent-dark)] transition duration-300">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        See Details
+                                    </a>
+                                    <span class="text-[var(--text-color)] opacity-90 ml-auto text-sm bg-[var(--accent-color)] text-white px-2 py-1 rounded-full">
+                                        <i class="fas fa-lock mr-2"></i>
+                                        Private
+                                    </span>
                                 </div>
                             </div>
                 </div>
@@ -463,15 +398,22 @@
                         <div class="flex items-center gap-3 mb-4">
                             <i class="fas fa-project-diagram text-2xl text-[var(--accent-color)]"></i>
                             <h3 class="text-xl font-bold text-[var(--text-color)]">📡 Track 2: Network Design & Strategic Planning</h3>
-                </div>
+                        </div>
                         <div class="ml-8 space-y-4">
+                            <!-- Track 2 Products -->
                             <div class="bg-[var(--bg-color)] p-4 rounded-lg border border-[var(--border-color)]">
                                 <h4 class="font-semibold text-[var(--accent-color)] mb-2">Product: ConnectRural</h4>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <p class="text-[var(--text-color)] opacity-90">
-                                        <i class="fas fa-broadcast-tower text-[var(--accent-color)] text-xl"></i>
-                                        Description: AI-powered solution for optimizing CBRS deployment in underserved areas
-                                    </p>
+                                    <div class="text-[var(--text-color)] opacity-90">
+                                        <i class="fas fa-broadcast-tower text-[var(--accent-color)] text-xl mb-2"></i>
+                                        <p class="font-semibold mb-2">Description:</p>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>AI-powered CBRS deployment optimization</li>
+                                            <li>Analyzes terrain and demographics data</li>
+                                            <li>Maximizes rural area coverage</li>
+                                            <li>Minimizes infrastructure costs</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <span class="text-[var(--text-color)] opacity-90">
@@ -479,20 +421,50 @@
                                         Category: Network Coverage Expansion
                                     </span>
                                 </div>
+                                <div class="flex items-center gap-2 mt-3">
+                                    <a href="https://docs.google.com/document/d/1YzXaS2GsT4Fq7m6CIr4GuP_U-UgmMhnAj2-NBtvuHhc/edit?usp=sharing" 
+                                       target="_blank"
+                                       class="inline-flex items-center text-[var(--accent-color)] hover:text-[var(--accent-dark)] transition duration-300">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        See Details
+                                    </a>
+                                    <span class="text-[var(--text-color)] opacity-90 ml-auto text-sm bg-[var(--accent-color)] text-white px-2 py-1 rounded-full">
+                                        <i class="fas fa-lock mr-2"></i>
+                                        Private
+                                    </span>
+                                </div>
                             </div>
 
                             <div class="bg-[var(--bg-color)] p-4 rounded-lg border border-[var(--border-color)]">
                                 <h4 class="font-semibold text-[var(--accent-color)] mb-2">Product: ResiliNet</h4>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <p class="text-[var(--text-color)] opacity-90">
-                                        <i class="fas fa-shield-alt text-[var(--accent-color)] text-xl"></i>
-                                        Description: AI-driven disaster recovery and network restoration system
-                                    </p>
+                                    <div class="text-[var(--text-color)] opacity-90">
+                                        <i class="fas fa-shield-alt text-[var(--accent-color)] text-xl mb-2"></i>
+                                        <p class="font-semibold mb-2">Description:</p>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>Predicts potential network failures</li>
+                                            <li>Automates disaster recovery</li>
+                                            <li>Provides real-time restoration strategies</li>
+                                            <li>Uses AI for network resilience</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <span class="text-[var(--text-color)] opacity-90">
                                         <i class="fas fa-tag text-[var(--accent-color)] mr-2"></i>
                                         Category: Network Resilience
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-2 mt-3">
+                                    <a href="https://docs.google.com/document/d/1YzXaS2GsT4Fq7m6CIr4GuP_U-UgmMhnAj2-NBtvuHhc/edit?usp=sharing" 
+                                       target="_blank"
+                                       class="inline-flex items-center text-[var(--accent-color)] hover:text-[var(--accent-dark)] transition duration-300">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        See Details
+                                    </a>
+                                    <span class="text-[var(--text-color)] opacity-90 ml-auto text-sm bg-[var(--accent-color)] text-white px-2 py-1 rounded-full">
+                                        <i class="fas fa-lock mr-2"></i>
+                                        Private
                                     </span>
                                 </div>
                             </div>
@@ -505,11 +477,41 @@
                             <i class="fas fa-bolt text-2xl text-[var(--accent-color)]"></i>
                             <h3 class="text-xl font-bold text-[var(--text-color)]">⚡ Track 3: Optimizing Resource Allocation</h3>
                         </div>
-                        <div class="ml-8">
-                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                                <i class="fas fa-clock mr-1"></i>
-                                Team working on it...
-                            </span>
+                        <div class="ml-8 space-y-4">
+                            <!-- Add back DigitalActivator -->
+                            <div class="bg-[var(--bg-color)] p-4 rounded-lg border border-[var(--border-color)]">
+                                <h4 class="font-semibold text-[var(--accent-color)] mb-2">Product: DigitalActivator</h4>
+                                <div class="flex items-center gap-2 mb-3">
+                                    <div class="text-[var(--text-color)] opacity-90">
+                                        <i class="fas fa-digital-tachograph text-[var(--accent-color)] text-xl mb-2"></i>
+                                        <p class="font-semibold mb-2">Description:</p>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>Transforms basic connectivity into robust digital services</li>
+                                            <li>Creates community-focused applications and platforms</li>
+                                            <li>Enables educational and health service delivery</li>
+                                            <li>Optimizes content delivery for low-bandwidth areas</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-[var(--text-color)] opacity-90">
+                                        <i class="fas fa-tag text-[var(--accent-color)] mr-2"></i>
+                                        Category: Digital Service Activation
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-2 mt-3">
+                                    <a href="https://docs.google.com/document/d/1SHaY7cHm8HoQMl20CWhrhtC3aG9bXmERKWGZT9y1EAQ/edit?usp=sharing" 
+                                       target="_blank"
+                                       class="inline-flex items-center text-[var(--accent-color)] hover:text-[var(--accent-dark)] transition duration-300">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        See Details
+                                    </a>
+                                    <span class="text-[var(--text-color)] opacity-90 ml-auto text-sm bg-[var(--accent-color)] text-white px-2 py-1 rounded-full">
+                                        <i class="fas fa-lock mr-2"></i>
+                                        Private
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
