@@ -125,8 +125,9 @@ document.querySelector('.theme-btn').addEventListener('mouseout', function() {
 
 // Add this function to handle auto theme cycling
 function startAutoTheme() {
+    // 'dark', 
     const themes = [
-        'dark', 'dark-2', 'purple', 'blue', 'ocean',
+        'dark-2', 'purple', 'blue', 'ocean',
         'sunset', 'rose', 'forest', 'midnight',
         'coral', 'mint', 'amber', 'nordic',
         'sakura', 'cyber', 'autumn'
