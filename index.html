@@ -50,26 +50,23 @@
 </head>
 <body class="bg-[var(--bg-color)] font-sans">
     <!-- Update Announcement Banner -->
-    <div id="announcement-banner" class="bg-[var(--accent-color)] text-[var(--bg-color)] fixed w-full z-[60] top-0">
+   <div id="announcement-banner" class="bg-[var(--accent-color)] text-[var(--bg-color)] fixed w-full z-[60] top-0">
         <div class="max-w-7xl mx-auto h-full">
             <div class="flex items-center justify-center h-full">
                 <div class="flex items-center gap-x-2">
                     <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-[var(--bg-color)]">
-                        <i class="fas fa-lightbulb text-[var(--accent-color)] text-sm"></i>
+                        <i class="fas fa-trophy text-[var(--accent-color)] text-sm"></i>
                     </span>
-                    <span class="font-medium whitespace-nowrap">
-                        Ideation Phase
-                    </span>
+                    <a href="#hackathons" onclick="scrollToHackathons(event)" class="font-medium whitespace-nowrap hover:opacity-80 transition-opacity">
+                        Active Hackathon
+                    </a>
                 </div>
                 <span class="h-4 w-[1px] bg-[var(--bg-color)]/30 hidden md:block mx-3"></span>
-                <div class="text-sm text-center hackathon-title flex items-center gap-4">
-                    <a href="https://docs.google.com/document/d/1YzXaS2GsT4Fq7m6CIr4GuP_U-UgmMhnAj2-NBtvuHhc/edit?usp=sharing" 
-                       target="_blank"
-                       class="font-semibold hover:opacity-80 transition-opacity">
-                       View Documentation
-                       <span aria-hidden="true">&rarr;</span>
+                <div class="text-sm text-center hackathon-title">
+                    <a href="#hackathons" onclick="scrollToHackathons(event)" class="font-semibold hover:opacity-80 transition-opacity">
+                       AI for Connectivity Hackathon II 
+                       <span aria-hidden="true">→</span>
                     </a>
-                    <span class="h-4 w-[1px] bg-[var(--bg-color)]/30 hidden md:block"></span>
                 </div>
             </div>
         </div>
@@ -413,7 +410,7 @@
         </section>
 
     <!-- Update Hackathon Affiliation Section -->
-    <section class="py-16 bg-[var(--bg-color)]">
+    <section class="py-16 bg-[var(--bg-color)]" id="hackathons">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-[var(--bg-color)] p-8 rounded-xl shadow-lg border border-[var(--border-color)]">
                 <div class="flex flex-col md:flex-row items-center gap-8">
